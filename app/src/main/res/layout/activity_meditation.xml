@@ -22,13 +22,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/titleTv"
+            android:id="@+id/titleMediTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/paytone_one"
             android:gravity="center_horizontal"
             android:text="Meditation Music"
+            android:textColor="#212121"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -40,6 +41,7 @@
             android:fontFamily="@font/paytone_one"
             android:gravity="center_horizontal"
             android:text="Just tap on sounds you want and relax"
+            android:textColor="#212121"
             android:textStyle="italic" />
     </LinearLayout>
 
@@ -49,7 +51,119 @@
         android:layout_height="120dp"
         android:layout_margin="20dp"
         android:background="@drawable/linear_layout_medi"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="0dp"></LinearLayout>
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/forestImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/mountain" />
+
+        <TextView
+            android:id="@+id/forestTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/paytone_one"
+            android:text="Forest Sounds"
+            android:textAlignment="center"
+            android:textColor="#212121"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/oceanSoundsBt"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/linear_layout_medi"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forestSoundsBt">
+
+        <ImageView
+            android:id="@+id/oceanImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/sunset" />
+
+        <TextView
+            android:id="@+id/oceanTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/paytone_one"
+            android:text="Sea Sounds"
+            android:textAlignment="center"
+            android:textColor="#212121"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="100dp"
+        android:background="@drawable/linear_layout_medi"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/play_icon" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/pause_icon" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/stop_icon" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
