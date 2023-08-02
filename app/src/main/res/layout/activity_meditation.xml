@@ -122,25 +122,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Space
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button"
-            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:background="@drawable/play_icon" />
-
-        <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/pauseBt"
             style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Surface"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -150,7 +137,7 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="2" />
 
         <Button
             android:id="@+id/stopBt"
@@ -163,7 +150,7 @@
         <Space
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
     </LinearLayout>
 

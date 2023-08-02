@@ -24,15 +24,21 @@ class MainActivity : AppCompatActivity() {
 
         card_about = findViewById(R.id.credits_card)
         card_about.setOnClickListener{RunAbout()}
+
+        card_articles = findViewById(R.id.articles_card)
+        card_articles.setOnClickListener{RunArticles()}
     }
 
     fun RunMedi(){
         val intent = Intent(this@MainActivity,MeditationActivity::class.java)
         startActivity(intent)
-
     }
     fun RunAbout(){
         val intent = Intent(this@MainActivity,AboutActivity::class.java)
+        startActivity(intent)
+    }
+    fun RunArticles(){
+        val intent = Intent(this@MainActivity,ArticlesActivity::class.java)
         startActivity(intent)
     }
 }
