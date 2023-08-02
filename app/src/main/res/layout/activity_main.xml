@@ -21,7 +21,7 @@
         android:paddingBottom="40dp"
         android:text="Meditate"
         android:textColor="@color/white"
-        android:textSize="50sp" />
+        android:textSize="60sp" />
 <GridLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -52,8 +52,8 @@
 
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/yogi_icon" />
 
             <TextView
@@ -82,7 +82,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="#CCFFFFFF"
+        app:cardBackgroundColor="#CC949494"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp">
 
@@ -94,8 +94,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/statistic_icon" />
 
             <TextView
@@ -135,8 +135,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/book_icon" />
 
             <TextView
@@ -176,8 +176,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/about_icon" />
 
             <TextView

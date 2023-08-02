@@ -1,10 +1,8 @@
 package com.recon.meditationapp
 
-import android.app.ActivityOptions
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     fun RunMedi(){
         val intent = Intent(this@MainActivity,MeditationActivity::class.java)
+//        try {
+//            Thread.sleep(1000) //Приостанавливает поток на 1 секунду
+//            }
+//        catch (e: Exception) { }
         startActivity(intent)
     }
     fun RunAbout(){

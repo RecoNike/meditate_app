@@ -19,18 +19,17 @@ class MeditationActivity : AppCompatActivity() {
         val forestButton : LinearLayout = findViewById(R.id.forestSoundsBt)
         val oceanButton : LinearLayout = findViewById(R.id.oceanSoundsBt)
         val stopButon : Button = findViewById(R.id.stopBt)
-        //val startButton : Button = findViewById(R.id.startBt)
         val pauseButon : Button = findViewById(R.id.pauseBt)
 
 
         fun PauseFun(){
-            if(playerForest.isPlaying && !isPaused){
+            if(playerForest.isPlaying){
                 playerForest.pause()
                 isPaused = true
                 pauseButon.setBackgroundResource(R.drawable.play_icon)
                 return
             }
-            if(playerBeach.isPlaying && !isPaused){
+            if(playerBeach.isPlaying){
                 playerBeach.pause()
                 isPaused = true
                 pauseButon.setBackgroundResource(R.drawable.play_icon)
@@ -40,8 +39,8 @@ class MeditationActivity : AppCompatActivity() {
             if(!playerForest.isPlaying && playerForest.getCurrentPosition() > 0){
                 playerForest.start()
                 isPaused = false
-                return
                 pauseButon.setBackgroundResource(R.drawable.pause_icon)
+                return
             }
             if(!playerBeach.isPlaying && playerBeach.getCurrentPosition() > 0){
                 playerBeach.start()
@@ -64,22 +63,27 @@ class MeditationActivity : AppCompatActivity() {
             }
         }
         forestButton.setOnClickListener{
+            playerBeach.stop()
             if(playerForest == null){
                 playerForest = MediaPlayer.create(this, R.raw.forest_sounds)
             }
             if(!playerForest.isPlaying && !playerBeach.isPlaying) {
                 playerForest.start()
                 pauseButon.setBackgroundResource(R.drawable.pause_icon)
+                isPaused = false
             }
+
         }
 
         oceanButton.setOnClickListener{
+            playerForest.stop()
             if(playerBeach == null){
                 playerBeach = MediaPlayer.create(this, R.raw.forest_sounds)
             }
             if(!playerBeach.isPlaying && !playerForest.isPlaying) {
                 playerBeach.start()
                 pauseButon.setBackgroundResource(R.drawable.pause_icon)
+                isPaused = false
             }
         }
 
