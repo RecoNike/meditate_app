@@ -4,7 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="0.8"
     tools:context=".ArticlesActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageView
+            android:id="@+id/exitIcn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="left|center_vertical"
+            app:srcCompat="@drawable/exit_icon" />
+    </LinearLayout>
 
     <WebView
         android:id="@+id/webViewView"
@@ -12,6 +30,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    </WebView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

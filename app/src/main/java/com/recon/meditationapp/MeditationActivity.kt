@@ -18,6 +18,7 @@ class MeditationActivity : AppCompatActivity() {
         var isPaused: Boolean = false
         val forestButton : LinearLayout = findViewById(R.id.forestSoundsBt)
         val oceanButton : LinearLayout = findViewById(R.id.oceanSoundsBt)
+
         val stopButon : Button = findViewById(R.id.stopBt)
         val pauseButon : Button = findViewById(R.id.pauseBt)
 
@@ -55,7 +56,7 @@ class MeditationActivity : AppCompatActivity() {
                 playerForest.pause()
                 playerForest.seekTo(0)
                 pauseButon.setBackgroundResource(R.drawable.pause_icon)
-            }
+            } else
             if(playerBeach.isPlaying){
                 playerBeach.pause()
                 playerBeach.seekTo(0)
@@ -67,7 +68,7 @@ class MeditationActivity : AppCompatActivity() {
             if(playerForest == null){
                 playerForest = MediaPlayer.create(this, R.raw.forest_sounds)
             }
-            if(!playerForest.isPlaying && !playerBeach.isPlaying) {
+            if(!playerForest.isPlaying) {
                 playerForest.start()
                 pauseButon.setBackgroundResource(R.drawable.pause_icon)
                 isPaused = false
@@ -80,7 +81,7 @@ class MeditationActivity : AppCompatActivity() {
             if(playerBeach == null){
                 playerBeach = MediaPlayer.create(this, R.raw.forest_sounds)
             }
-            if(!playerBeach.isPlaying && !playerForest.isPlaying) {
+            if(!playerBeach.isPlaying) {
                 playerBeach.start()
                 pauseButon.setBackgroundResource(R.drawable.pause_icon)
                 isPaused = false
